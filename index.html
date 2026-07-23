@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07100a" />
+    <link rel="icon" type="image/png" href="./brand/amt-logo.png" />
+    <title>Independent AMT Market</title>
+  </head>
+  <body>
+    <main>
+      <div class="widget-brand"><img src="./brand/amt-logo.png" alt="AMT-1" /><p class="eyebrow">PERMISSIONLESS INTEGRATION</p></div>
+      <h1>Independent AMT market</h1>
+      <p class="lead">No AMT-hosted API. Quotes and transactions come directly from Robinhood Chain.</p>
+      <section class="card">
+        <div class="market"><span id="symbol">AMT</span><small id="binding">Discovering market…</small></div>
+        <button id="connect">Connect injected wallet</button>
+        <div class="tabs">
+          <button id="buy-tab" class="active">Buy</button>
+          <button id="sell-tab">Sell</button>
+        </div>
+        <label><span id="amount-label">You pay</span><input id="amount" inputmode="decimal" placeholder="0.001" /></label>
+        <div class="quote"><span>Estimated output</span><strong id="quote">—</strong></div>
+        <button id="submit" disabled>Connect wallet</button>
+        <p id="status"></p>
+      </section>
+      <footer>Official Universal Router · One canonical AMT price</footer>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

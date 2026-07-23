@@ -1,0 +1,20 @@
+:root { color: #edf7ef; background: #07100a; font: 16px/1.5 Inter, system-ui, sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: radial-gradient(circle at 70% 10%, #153c24, transparent 42%), #07100a; }
+main { width: min(560px, calc(100% - 32px)); margin: 0 auto; padding: 72px 0 32px; }
+.widget-brand { display: flex; align-items: center; gap: 12px; }
+.widget-brand img { width: 46px; height: 46px; object-fit: contain; }
+.widget-brand .eyebrow { margin: 0; }
+.eyebrow { color: #75f5a3; font-size: 12px; letter-spacing: .18em; }
+h1 { font-size: clamp(40px, 8vw, 64px); line-height: 1; margin: 12px 0; letter-spacing: -.05em; }
+.lead { color: #9db0a2; max-width: 480px; }
+.card { margin-top: 40px; padding: 24px; border: 1px solid #284332; border-radius: 22px; background: #0c1710e8; box-shadow: 0 24px 80px #0008; }
+.market, .quote { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.market span { font-size: 24px; font-weight: 700; }.market small, .quote span, footer { color: #85988a; }
+button, input { width: 100%; border: 1px solid #34513e; border-radius: 12px; padding: 14px; background: #102018; color: inherit; font: inherit; }
+button { cursor: pointer; margin-top: 18px; } button:hover, button.active, #submit { border-color: #75f5a3; }
+#submit { background: #75f5a3; color: #061008; font-weight: 750; } button:disabled { opacity: .45; cursor: not-allowed; }
+.tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }.tabs button { margin: 20px 0 14px; }
+label span { display: block; color: #9db0a2; margin-bottom: 8px; } input { font-size: 22px; }
+.quote { padding: 20px 0 4px; }.quote strong { text-align: right; } #status { min-height: 24px; color: #75f5a3; overflow-wrap: anywhere; }
+footer { text-align: center; margin-top: 24px; font-size: 13px; }

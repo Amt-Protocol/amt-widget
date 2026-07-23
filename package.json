@@ -1,0 +1,18 @@
+{
+  "name": "amt-1-standalone-widget",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build"
+  },
+  "dependencies": {
+    "@amt-1/sdk": "^0.1.0",
+    "viem": "2.55.7"
+  },
+  "devDependencies": {
+    "typescript": "5.8.3",
+    "vite": "6.4.3"
+  }
+}
