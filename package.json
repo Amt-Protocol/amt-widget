@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build"
+    "check": "tsc --noEmit",
+    "build": "npm run check && npm run build:web",
+    "build:web": "vite build"
   },
   "dependencies": {
     "@amt-1/sdk": "^0.1.0",
