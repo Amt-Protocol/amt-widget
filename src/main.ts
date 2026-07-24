@@ -25,7 +25,11 @@ const chain = {
   nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
   rpcUrls: { default: { http: ["https://rpc.mainnet.chain.robinhood.com"] } },
 } as const;
-const token = "0xbba658F4d68Ef5ad00fcF8FB3212547FFcF2f34d" as Address;
+const configuredToken = import.meta.env.VITE_AMT_TOKEN as string | undefined;
+if (!configuredToken || !/^0x[0-9a-fA-F]{40}$/.test(configuredToken)) {
+  throw new Error("Set VITE_AMT_TOKEN to a deployed AMT-1 Draft 0.2 token address");
+}
+const token = configuredToken as Address;
 const publicClient = createPublicClient({ chain, transport: http(chain.rpcUrls.default.http[0]) });
 
 async function main() {
